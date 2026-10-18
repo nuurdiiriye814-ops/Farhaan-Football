@@ -1,4 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farhaan Football</title>
+<style>
+body{margin:0;background:#101827;color:white;font-family:Arial,sans-serif}
+header{background:#087f5b;padding:24px 16px;text-align:center}
+h1{margin:0;font-size:28px}
+nav{display:flex;justify-content:center;gap:12px;padding:16px}
+button{padding:12px 18px;border:0;border-radius:8px;background:#20c997;color:#102018;font-weight:bold}
+main{padding:16px;max-width:600px;margin:auto}
+.card{background:#1e293b;margin:12px 0;padding:16px;border-radius:12px}
+.muted{color:#cbd5e1;font-size:14px}
+</style>
+</head>
+<body>
+<header>
+<h1>⚽ FARHAAN FOOTBALL</h1>
+<p>Live Scores & Match Schedule</p>
+</header>
+<nav>
+<button onclick="show('scores')">Results</button>
+<button onclick="show('schedule')">Fixtures</button>
+</nav>
+<main>
+<div id="content"></div>
+<p class="muted">Demo data — not live scores.</p>
+</main>
+<script>
+const data = {
+scores: [
+["Manchester City","2 - 1","Arsenal"],
+["Real Madrid","1 - 0","Barcelona"]
+],
+schedule: [
+["Manchester City","vs","Liverpool","Tomorrow"],
+["Arsenal","vs","Chelsea","Upcoming"]
+]
+};
+function show(type){
+const title = type === "scores" ? "Recent Results" : "Upcoming Fixtures";
+document.getElementById("content").innerHTML =
+"<h2>"+title+"</h2>"+data[type].map(m =>
+'<div class="card"><strong>'+m[0]+'　'+m[1]+'　'+m[2]+'</strong>'+
+(type==="schedule" ? '<p class="muted">'+m[3]+'</p>' : '')+
+'</div>').join("");
+}
+show("scores");
+</script>
+</body>
+</html><!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
