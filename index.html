@@ -1,6 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!DOCTYPE html>
+<html lang="so">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farhaan Football</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101827;color:white;font-family:Arial,sans-serif}
+header{background:#087f5b;padding:24px 16px;text-align:center}
+header h1{margin:0;font-size:27px}
+header p{margin-bottom:0}
+nav{display:flex;gap:8px;justify-content:center;padding:14px}
+button{background:#087f5b;color:white;border:0;padding:12px;border-radius:8px;font-weight:bold}
+main{padding:16px;max-width:650px;margin:auto}
+.card{background:#1e293b;padding:16px;margin:12px 0;border-radius:12px}
+.muted{color:#cbd5e1;font-size:14px}
+.score{text-align:center;font-size:22px;font-weight:bold;margin:16px 0}
+h2{color:#34d399;font-size:20px}
+footer{text-align:center;padding:25px;color:#cbd5e1}
+</style>
+</head>
+<body>
+<header>
+<h1>⚽ FARHAAN FOOTBALL</h1>
+<p>Natiijooyinka iyo jadwalka ciyaaraha</p>
+</header>
+<nav>
+<button onclick="show('live')">🔴 Natiijooyin</button>
+<button onclick="show('schedule')">📅 Jadwal</button>
+</nav>
+<main>
+<section id="live">
+<h2>🔴 Natiijooyinka Tooska ah</h2>
+<div class="card">
+<p class="muted">Tusaale muuqaal ah — ma aha natiijo toos ah</p>
+<div class="score">Man City  -  Liverpool</div>
+<p style="text-align:center">Natiijada waxaa lagu soo bandhigi doonaa marka xogta ciyaaraha la xiro.</p>
+</div>
+</section>
+<section id="schedule" style="display:none">
+<h2>📅 Jadwalka Ciyaaraha</h2>
+<div class="card">
+<p><b>Premier League</b></p>
+<p>Kooxaha iyo waqtiga ciyaarta waxaa lagu dari doonaa xogta jadwalka.</p>
+</div>
+</section>
+<div class="card">
+<h2>🌍 Horyaallada</h2>
+<p>🏆 Premier League</p>
+<p>🏆 La Liga</p>
+<p>🏆 Champions League</p>
+<p>🏆 Serie A</p>
+</div>
+</main>
+<footer>© 2026 Farhaan Football</footer>
+<script>
+function show(page){
+document.getElementById('live').style.display=
+page==='live'?'block':'none';
+document.getElementById('schedule').style.display=
+page==='schedule'?'block':'none';
+}
+</script>
+</body>
+</html>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Farhaan Football</title>
